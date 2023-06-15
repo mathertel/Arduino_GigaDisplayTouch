@@ -220,7 +220,7 @@ uint8_t Arduino_GigaDisplayTouch::_gt911ReadInputCoord(uint8_t * pointsbuf, uint
     uint8_t error;
     
     contacts = 0;
-    error    = _gt911ReadOp(GT911_REG_GESTURE_START_POINT, pointsbuf, GT911_CONTACT_SIZE * GT911_MAX_CONTACTS);
+    error    = _gt911ReadOp(GT911_REG_GESTURE_START_POINT, pointsbuf, GT911_CONTACT_SIZE * GT911_MAX_CONTACTS + 1);
 
     if (error) {
         return 1; /* I2C comm error */
